@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[39522,["/ocean-seven/_next/static/chunks/f26331e1ba25782b.js","/ocean-seven/_next/static/chunks/676c0bbfe8ec6bfb.js"],"default"]
+3:I[22083,["/ocean-seven/_next/static/chunks/f26331e1ba25782b.js","/ocean-seven/_next/static/chunks/676c0bbfe8ec6bfb.js"],"default"]
+:HL["/ocean-seven/_next/static/chunks/9db013185f041286.css","style"]
+0:{"buildId":"SyvTVYQwcJZzajyHlnRwB","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/ocean-seven/_next/static/chunks/9db013185f041286.css","precedence":"next"}]],["$","html",null,{"lang":"ar","dir":"rtl","className":"montserrat_20533f7e-module__f-9vkq__variable instrument_serif_ba0e82fb-module__V0JUaG__variable jetbrains_mono_4bc3e557-module__XWxg7W__variable cairo_6ae70f9-module__Lfk48G__variable noto_naskh_arabic_aea3d19e-module__hp4j4q__variable","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"loading":null,"isPartial":false}

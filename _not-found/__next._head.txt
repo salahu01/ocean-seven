@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[15013,["/ocean-seven/_next/static/chunks/f26331e1ba25782b.js","/ocean-seven/_next/static/chunks/676c0bbfe8ec6bfb.js"],"ViewportBoundary"]
+3:I[15013,["/ocean-seven/_next/static/chunks/f26331e1ba25782b.js","/ocean-seven/_next/static/chunks/676c0bbfe8ec6bfb.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[2624,["/ocean-seven/_next/static/chunks/f26331e1ba25782b.js","/ocean-seven/_next/static/chunks/676c0bbfe8ec6bfb.js"],"IconMark"]
+0:{"buildId":"SyvTVYQwcJZzajyHlnRwB","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","link","0",{"rel":"manifest","href":"/ocean-seven/manifest.webmanifest"}],["$","link","1",{"rel":"icon","href":"/ocean-seven/icon.svg?icon.c0027662.svg","sizes":"any","type":"image/svg+xml"}],["$","link","2",{"rel":"apple-touch-icon","href":"/ocean-seven/apple-icon.png?apple-icon.9d7a66d1.png","sizes":"180x180","type":"image/png"}],["$","$L5","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

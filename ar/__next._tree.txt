@@ -1,0 +1,8 @@
+:HL["/ocean-seven/_next/static/chunks/9db013185f041286.css","style"]
+:HL["/ocean-seven/_next/static/media/051742360c26797e-s.p.102b7f24.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocean-seven/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocean-seven/_next/static/media/7ebf22b5a21034f8-s.p.d8bad3ab.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocean-seven/_next/static/media/9ff27b8a0a8f3dc0-s.p.9cb3a3e2.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocean-seven/_next/static/media/d41831e24743a3c1-s.p.ae65d18e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocean-seven/_next/static/media/e8f2fbee2754df70-s.p.9b7a96b4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"buildId":"SyvTVYQwcJZzajyHlnRwB","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"ar","paramType":null,"paramKey":"ar","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
