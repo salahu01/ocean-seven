@@ -1,0 +1,87 @@
+name: Build and deploy
+
+# Builds the private source (salahu01/ocean-seven-src) and publishes it to GitHub Pages
+# at https://salahu01.github.io/ocean-seven/. Runs hourly but only rebuilds when the
+# source main branch has changed; use "Run workflow" for an immediate deploy.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild even if the source has not changed
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+    steps:
+      - name: Check out private source
+        uses: actions/checkout@v4
+        with:
+          repository: salahu01/ocean-seven-src
+          ref: main
+          ssh-key: ${{ secrets.SOURCE_DEPLOY_KEY }}
+
+      - name: Skip if already deployed
+        id: check
+        run: |
+          sha=$(git rev-parse HEAD)
+          live=$(curl -fsS https://salahu01.github.io/ocean-seven/version.txt || true)
+          if [ "$live" = "$sha" ] && [ "${{ github.event_name }}" = "schedule" -o "${{ inputs.force }}" = "false" ]; then
+            echo "Source $sha is already live — nothing to do."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: pnpm/action-setup@v4
+        if: steps.check.outputs.changed == 'true'
+        with:
+          package_json_file: web/package.json
+
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.changed == 'true'
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: web/pnpm-lock.yaml
+
+      - name: Install and build
+        if: steps.check.outputs.changed == 'true'
+        working-directory: web
+        env:
+          NEXT_PUBLIC_BASE_PATH: /ocean-seven
+          NEXT_PUBLIC_SITE_URL: https://salahu01.github.io/ocean-seven
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+          git rev-parse HEAD > out/version.txt
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.check.outputs.changed == 'true'
+        with:
+          path: ./web/out
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
